@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Leanne Macaspac, designer</title>
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon.png">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+  <script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+   ga('create', 'UA-87764437-1', 'auto');
+   ga('send', 'pageview');
+
+  </script>
+</head>
+
+<body>
+
+<div class="flex-grid flex-center">
+  <div class="main flex-grid flex-center flex-space">
+    <div class="intro flex-grid flex-center-h">
+      <div class="title flex-grid flex-center">
+        <h1>Hi, I'm <span class="bold">Leanne Macaspac</span>,<br>
+        I'm a product designer at Shopify, doodling away.</h1>
+      </div>
+      <div class="cta">
+        <div class="button"><div class="link"><a href="http://shop.macaspac.ca">Buy my art</a></div> <div class="line"></div></div>
+        <div class="button"><div class="link"><a href="http://mxfilm.tumblr.com">Photojournal</a></div> <div class="line"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main flex-grid">
+    <div class="intro flex-grid flex-right">
+      <div class="about">
+        <p>A lot of what I like to do revolves around discovering new things and understanding how and why
+        we do the things we do. I'm passionate about people because we all bring
+        something to the table and, by bringing our experiences together, we have
+        the ability to move forward and further. It's a pleasure seeing life
+        in a different perspective other than my own (and discover new music that I can add to my
+        <a href="https://open.spotify.com/user/12159304002">playlists</a>).</p>
+
+        <p>Born and raised in Toronto, I'm currently designing the merchant experience for our channels platform at <a href="https://www.shopify.ca/channels">Shopify</a>.
+        Before that, I was leading projects as a senior UI/UX designer at <a href="http://konradgroup.com/">Konrad Group</a>.
+        Aside from work, I travel, casually shoot film with my Nikon L35AF and make art for my friends when I'm not playing sports.</p>
+
+        <p>I'm always open to chat over a cup of coffee. Feel free to e-mail me at <a href="mailto:leanne@macaspac.ca?subject=&#9749;%20Coffee%20date">leanne@macaspac.ca</a>.</p>
+
+        <div class="cta">
+          <div class="link"><a href="mailto:leanne@macaspac.ca?subject=Portfolio%20Request">Request portfolio</a></div> <div class="line"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+      <a href="https://open.spotify.com/user/12159304002" target="_blank"><span class="song-title" ></span><span class="song-artist"></span></a>
+      <ul class="social">
+        <li><a href="https://twitter.com/lemcspc"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/leanne-macaspac-2816b652"><i class="fa fa-linkedin"></i></a></li>
+        <li><a href="https://www.instagram.com/mcspc/"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="https://open.spotify.com/user/12159304002"><i class="fa fa-spotify"></i></a></li>
+      </ul>
+  </div>
+
+</div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script>
+  $(document).ready(function() {
+var url = "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=mcspc&api_key=22435ff6cc31cc9f89849d58e7c55f97&format=json";
+$.getJSON(url, function(data) {
+  var artist = data.recenttracks.track[0].artist["#text"];
+  var song = data.recenttracks.track[0]["name"];
+  var player = artist + song;
+    if (window.innerWidth < 900 && player.length > 35) {
+      song = song.substring (0,20)+"…";
+    }
+      $('.song-title').html(""+song+" \ ");
+      $('.song-artist').html("– " +artist+"\ ");
+});
+  </script>
+
+</body>
+</html>
